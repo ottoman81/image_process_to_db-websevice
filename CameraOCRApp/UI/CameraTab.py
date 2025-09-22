@@ -66,15 +66,15 @@ class CameraTab(QWidget):
         rtsp_group = QGroupBox("RTSP Bağlantı Ayarları")
         rtsp_layout = QFormLayout()
         
-        self.rtsp_url_input = QLineEdit("rtsp://192.168.50.114:554")
+        self.rtsp_url_input = QLineEdit()
         self.rtsp_url_input.setPlaceholderText("rtsp://192.168.1.100:554/stream")
         rtsp_layout.addRow("RTSP URL:", self.rtsp_url_input)
         
-        self.username_input = QLineEdit("admin")
+        self.username_input = QLineEdit()
         self.username_input.setPlaceholderText("admin")
         rtsp_layout.addRow("Kullanıcı Adı:", self.username_input)
         
-        self.password_input = QLineEdit("admin123.")
+        self.password_input = QLineEdit()
         self.password_input.setPlaceholderText("password")
         self.password_input.setEchoMode(QLineEdit.Password)
         rtsp_layout.addRow("Şifre:", self.password_input)
@@ -366,4 +366,5 @@ class CameraTab(QWidget):
     
     def get_processing_params(self):
         """Processing parametrelerini döndür"""
+
         return self.processing_params
